@@ -2,7 +2,7 @@
     margin: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: 'Figtree';
+    font-family: 'Smokum';
 }
 
 h1 {
@@ -16,7 +16,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(6, 23, 30, 1);
+    background-color: rgba(139, 90, 43, 1);
     gap: 160px;
     padding: 160px 0;
 }
@@ -41,10 +41,10 @@ main {
     width: 150px;
     height: 150px;
     border: 2px;
-    border-color: rgba(18, 70, 88, 1);
+    border-color: rgba(210,173,128, 1);
     border-radius: 16px;
 }
 
 .thumb:hover {
-    border-color: rgba(107, 193, 225, 1);
+    border-color: rgba(122, 139, 111, 1);
 }
