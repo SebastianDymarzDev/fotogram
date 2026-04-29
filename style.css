@@ -42,3 +42,7 @@ main {
     border-color: rgba(18, 70, 88, 1);
     border-radius: 16px;
 }
+
+.thumb:hover {
+    border-color: rgba(107, 193, 225, 1);
+}
