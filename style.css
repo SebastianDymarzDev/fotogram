@@ -1,6 +1,14 @@
 * {
-            margin: 0;
-            scroll-behavior: smooth;
-            box-sizing: border-box;
-            font-family: 'Figtree';
-        }
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Figtree';
+}
+
+h1 {
+    font-size: 56px;
+}
+
+main {
+    background-color: rgba(6, 23, 30, 1);
+}
