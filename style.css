@@ -32,7 +32,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: auto;
     gap: 16px;
 }
 

@@ -5,10 +5,10 @@
     }
 
     main {
-        padding: 38px max(120px, calc(50% - 720px));
+        padding: 160px max(120px, calc(50% - 720px));
     }
 
     footer {
-        padding: 48px max(120px, calc(50% - 720px));
+        padding: 30px max(120px, calc(50% - 720px));
     }
 }
