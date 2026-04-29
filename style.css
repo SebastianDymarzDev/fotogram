@@ -6,10 +6,40 @@
 }
 
 h1 {
+    text-align: center;
     font-size: 56px;
+    color: white;
+    margin-bottom: 160px;
 }
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(6, 23, 30, 1);
-    height: 100vh;
+    gap: 160px;
+    padding: 160px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: auto;
+}
+
+.thumbnails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 16px;
+}
+
+.thumb {
+    width: 150px;
+    height: 150px;
+    border: 2px;
+    border-color: rgba(18, 70, 88, 1);
+    border-radius: 16px;
 }
