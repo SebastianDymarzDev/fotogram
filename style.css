@@ -30,12 +30,14 @@ main {
 
 .thumbnails {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 16px;
 }
 
 .thumb {
+    display: flex;
     width: 150px;
     height: 150px;
     border: 2px;
