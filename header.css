@@ -1,10 +1,19 @@
 header{
     background-color: rgba(210,173,128, 1);
     display: flex;
+    align-items: center;
 }
 
 header img {
-    width: 40px;
-    padding: 20px 0;
+    width: 60px;
+    padding: 10px 0;
     display: flex;
+}
+
+.fotogram {
+    display: flex;
+    font-size: 40px;
+    text-decoration: none;
+    color: rgba(70,49,28,1);
+    cursor: default;
 }
