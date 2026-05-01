@@ -14,11 +14,9 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="media.css">
 
-    <script src="script.js"></script>
-   
 </head>
 
-<body>
+<body onload="init()">
     <header>
         <img src="./assets/images/icons/wild_west_logo.png" alt="Logo">
         <nav>
@@ -29,10 +27,27 @@
         <section class="content">
             <h1><span class="my">My</span> personal photo album</h1>
             <article>
-                <ul class="thumbnails" id="thumbs">
+                <ul class="thumbs" id="thumbs">
 
                 </ul>
             </article>
+
+            <dialog id="imagePopup">
+                <header>
+                    <h2 class="imgName" id="imgName"></h2>
+                    <button onclick="closeDialog()" id="closeButton">X</button>
+                </header>
+                <img id="popupImg" src="" alt="">
+                <nav>
+                    <button onclick="prevImage()" class="navButton">
+                        <span class="navText">Zurück</span>
+                    </button>
+                    <div></div>
+                    <button onclick="nextImage()" class="navButton">
+                        <span class="navText">Weiter</span>
+                    </button>
+                </nav>
+            </dialog>
         </section>
 
     </main>
@@ -41,5 +56,6 @@
         <img class="copyright" src="./assets/images/icons/© 2023 Developer Akademie GmbH.svg" alt="Copyright">
     </footer>
 </body>
- <script src="./renderImages.js"></script>
+<script src="./script.js"></script>
+
 </html>
