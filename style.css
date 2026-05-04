@@ -61,3 +61,10 @@ main {
     transform: scale(115%);
     transition: 255ms ease-in-out;
 }
+
+dialog {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

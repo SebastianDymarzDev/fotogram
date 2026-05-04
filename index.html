@@ -32,18 +32,20 @@
                 </ul>
             </article>
 
-            <dialog id="imagePopup">
+            <dialog id="imagePopup" aria-labelledby="imgTitle" aria-describedby="popupImg">
                 <header>
-                    <h2 class="imgName" id="imgName"></h2>
-                    <button onclick="closeDialog()" id="closeButton">X</button>
+                    <h2 class="imgTitle" id="imgTitle"></h2>
+                    <button aria-label="Close Popup" onclick="closeDialog()" id="closeButton">X</button>
                 </header>
-                <img id="popupImg" src="" alt="">
+                <section>
+                    <img id="popupImg" src="" alt="">
+                </section>
                 <nav>
-                    <button onclick="prevImage()" class="navButton">
+                    <button aria-label="Previous Image" onclick="prevImage()" class="navButton">
                         <span class="navText">Zurück</span>
                     </button>
                     <div></div>
-                    <button onclick="nextImage()" class="navButton">
+                    <button aria-label="Next Image" onclick="nextImage()" class="navButton">
                         <span class="navText">Weiter</span>
                     </button>
                 </nav>
