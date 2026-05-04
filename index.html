@@ -40,16 +40,16 @@
                     <h2 class="imgTitle" id="imgTitle"></h2>
                     <button aria-label="Close Popup" onclick="closeDialog()" id="closeButton">X</button>
                 </header>
-                <section>
+                <section class="popup_content">
                     <img id="popupImg" src="" alt="">
                 </section>
                 <nav>
                     <button aria-label="Previous Image" onclick="prevImage()" class="navButton">
-                        <span class="navText">Back</span>
+                       &lt; <span class="navText">Back</span>
                     </button>
-                    <div></div>
+                    <div class="imageNumber" id="imageNumber"></div>
                     <button aria-label="Next Image" onclick="nextImage()" class="navButton">
-                        <span class="navText">Next</span>
+                        <span class="navText">Next</span> &gt;
                     </button>
                 </nav>
             </dialog>

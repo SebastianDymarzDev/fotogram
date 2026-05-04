@@ -75,12 +75,28 @@ function renderImages() {
     });
 }
 
-
-
 function openDialog(i) {
     currentIndex = i;
+    popupImg.src = images[i].src;
+    popupImg.alt = images[i].alt;
     dialogRef.showModal();
+    showPopupTitle();
+    showImageNumber();
+}
 
+function showPopupTitle() {
+    let popupTitle = popupImg.alt;
+    let output = document.getElementById('imgTitle');
+
+    output.innerHTML = popupTitle;
+}
+
+function showImageNumber() {
+    let actualImage = currentIndex + 1;
+    let maxImages = images.length;
+    let output = actualImage + "/" + maxImages;
+
+    document.getElementById('imageNumber').innerHTML = output;
 }
 
 function closeDialog() {
