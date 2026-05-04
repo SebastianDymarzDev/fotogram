@@ -13,7 +13,7 @@ h1 {
     text-align: center;
     font-size: 56px;
     color: white;
-    margin-bottom: 160px;
+    margin-bottom: 80px;
 }
 
 .my {
@@ -32,8 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: rgba(139, 90, 43, 1);
-    gap: 160px;
-    padding: 160px 0;
+    padding: 80px 0;
     flex: 1;
 }
 
