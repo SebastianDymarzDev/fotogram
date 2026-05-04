@@ -4,7 +4,7 @@
     background-color: rgba(139, 90, 43, 1);
     box-shadow: 0px 10px 70px 20px rgba(210,173,128, 1);
     width: 80%;
-    height: 80%;
+    height: fit-content;
     max-width: 90vh;
     max-height: 90vh;
 
@@ -14,7 +14,7 @@
 .imagePopup img {
     border-radius: 20px;
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 80vh;
     box-shadow: 0px 10px 20px 13px rgba(0, 0, 0, 0.1);
 }
 
