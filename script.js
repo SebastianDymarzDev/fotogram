@@ -1,18 +1,55 @@
 let thumbs;
 let dialogRef;
 
-let images = ["./assets/images/bisons.jpeg",
-"./assets/images/bryce_canyon.jpg",
-"./assets/images/cars.jpg",
-"./assets/images/death_valley.jpg",
-"./assets/images/flight_over_grand_canyon.jpg",
-"./assets/images/grand_canyon_sundown.jpeg",
-"./assets/images/grand_canyon.jpg",
-"./assets/images/monument_valley.jpg",
-"./assets/images/riding.jpeg",
-"./assets/images/river.jpeg",
-"./assets/images/san_francisco.jpg",
-"./assets/images/yoshua_tree.jpeg"];
+let images = [
+    {
+        src: './assets/images/bisons.jpeg',
+        alt: 'Bisons'
+    },
+    {
+        src: './assets/images/bryce_canyon.jpg',
+        alt: 'Bryce Canyon'
+    },
+    {
+        src: './assets/images/cars.jpg',
+        alt: 'Route66'
+    },
+    {
+        src: './assets/images/death_valley.jpg',
+        alt: 'Death Valley'
+    },
+    {
+        src: './assets/images/flight_over_grand_canyon.jpg',
+        alt: 'Flug über dem Grand Canyon'
+    },
+    {
+        src: './assets/images/grand_canyon_sundown.jpeg',
+        alt: 'Sonneruntergang am Grand Canyon'
+    },
+    {
+        src: './assets/images/grand_canyon.jpg',
+        alt: 'Grand Canyon'
+    },
+    {
+        src: './assets/images/monument_valley.jpg',
+        alt: 'Monument Valley'
+    },
+    {
+        src: './assets/images/riding.jpeg',
+        alt: 'Motorrad fahren'
+    },
+    {
+        src: './assets/images/river.jpeg',
+        alt: 'Fluss'
+    },
+    {
+        src: './assets/images/san_francisco.jpg',
+        alt: 'San Francisco'
+    },
+    {
+        src: './assets/images/yoshua_tree.jpeg',
+        alt: 'Yoshua Tree Nationalpark'
+    }];
 
 function init() {
     thumbs = document.getElementById('thumbs');
@@ -23,14 +60,22 @@ function init() {
 
 function renderImages() {
     let getImages = "";
-    for (let i = 0; i < images.length; i++) {
-        getImages += `<li><img class="thumb" src="${images[i]}" alt="Galeriebild" onclick="openDialog(${i})"></li>` 
-    }
-    thumbs.innerHTML = getImages;
-    
+
+    images.forEach((item, index) => {
+        const li = document.createElement("li");
+
+        li.className = "thumb";
+
+        li.onclick = () => {
+            openDialog(index);
+        };
+
+        li.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+        thumbs.appendChild(li);
+    });
 }
 
-    
+
 
 function openDialog(i) {
     currentIndex = i;
