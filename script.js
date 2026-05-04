@@ -99,6 +99,34 @@ function showImageNumber() {
     document.getElementById('imageNumber').innerHTML = output;
 }
 
+function nextImage() {
+    currentIndex = currentIndex + 1;
+
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    popupImg.src = images[currentIndex].src;
+    popupImg.alt = images[currentIndex].alt;
+
+    showPopupTitle();
+    showImageNumber();
+}
+
+function prevImage() {
+    currentIndex = currentIndex - 1;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+
+    popupImg.src = images[currentIndex].src;
+    popupImg.alt = images[currentIndex].alt;
+
+    showPopupTitle();
+    showImageNumber();
+}
+
 function closeDialog() {
     dialogRef.close();
 }
