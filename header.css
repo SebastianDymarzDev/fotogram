@@ -1,7 +1,16 @@
 header{
-    background-color: rgba(210,173,128, 1);
     display: flex;
     align-items: center;
+    background-color: rgba(210,173,128, 1);
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
 header img {
