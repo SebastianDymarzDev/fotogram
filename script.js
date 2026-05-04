@@ -66,10 +66,17 @@ function renderImages() {
 
         li.className = "thumb";
 
-        li.onclick = () => {
-            openDialog(index);
-        };
+        li.addEventListener("click", () => openDialog(index));
 
+        li.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openDialog(index);
+            }
+        });
+
+        li.tabIndex = "0";
+        
         li.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
         thumbs.appendChild(li);
     });
@@ -129,4 +136,10 @@ function prevImage() {
 
 function closeDialog() {
     dialogRef.close();
+}
+
+function handleDialogClick(event) {
+    if (event.target.id === 'imagePopup') {
+        closeDialog();
+    }
 }

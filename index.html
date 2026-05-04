@@ -22,7 +22,7 @@
         <div class="header_container">
             <img src="./assets/images/icons/wild_west_logo.png" alt="Logo">
             <nav>
-                <a class="fotogram" href="'">Fotogram</a>
+                <a class="fotogram">Fotogram</a>
             </nav>
         </div>
     </header>
@@ -35,7 +35,7 @@
                 </ul>
             </article>
 
-            <dialog class="imagePopup" id="imagePopup" aria-labelledby="imgTitle" aria-describedby="popupImg">
+            <dialog class="imagePopup" id="imagePopup" onclick="handleDialogClick(event)" aria-labelledby="imgTitle" aria-describedby="popupImg">
                 <header>
                     <h2 class="imgTitle" id="imgTitle"></h2>
                     <button aria-label="Close Popup" onclick="closeDialog()" id="closeButton">X</button>
