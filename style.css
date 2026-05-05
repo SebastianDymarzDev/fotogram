@@ -80,9 +80,9 @@ main {
 }
 
 .thumb:focus-visible {
-    outline: 3px solid greenyellow;
-    outline-offset: 1px;
+    outline: 3px solid rgba(142, 226, 85, 1); 
     transform: scale(1.15); 
+    box-shadow: 0px 0px 30px 0px rgba(210,173,128, 1);
 }
 
 dialog {
