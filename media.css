@@ -4,12 +4,21 @@
         font-size: 40px;
     }
 
+        .navText {
+        display: none;
+    }
+
+
 }
 
 @media screen and (max-width: 390px) {
     
     h1 {
         font-size: 30px;
+    }
+
+    .imgTitle {
+        font-size: 1.2em;
     }
 
 }
