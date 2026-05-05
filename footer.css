@@ -9,8 +9,16 @@ footer {
     border-radius: 50% 50% 0 0;
 }
 
-footer_container {
+.footer_container {
     max-width: 1200px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.copyright {
+    font-family: 'Figtree';
+    font-size: 14px;
 }
