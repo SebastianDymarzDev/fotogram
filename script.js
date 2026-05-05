@@ -107,6 +107,7 @@ function openDialog(i) {
 
 function handleKeyPress(event, index) {
     if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
         openDialog(index); 
     }
 }
