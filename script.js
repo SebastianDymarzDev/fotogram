@@ -1,6 +1,8 @@
 let thumbs;
 let dialogRef;
 
+//array for the imgages
+
 let images = [
     {
         src: './assets/images/bisons.jpeg',
@@ -51,6 +53,8 @@ let images = [
         alt: 'Yoshua Tree Nationalpark'
     }];
 
+//initialised the elements for the html
+
 function init() {
     thumbs = document.getElementById('thumbs');
     dialogRef = document.getElementById('imagePopup');
@@ -58,38 +62,56 @@ function init() {
     renderImages();
 }
 
+//create the template for the thumbs
+
+function getImagesTemplate(i) {
+    return `
+        <div class="thumb-box">
+            <img 
+                class="thumb"
+                src="${images[i].src}"
+                alt="${images[i].alt}"
+                onclick="openDialog(${i})"
+                onkeydown="handleKeyPress(event, ${i})"
+                tabindex="0"
+                >
+        </div>
+    `;
+}
+
+//render the img's for the thumbs
+
 function renderImages() {
     let getImages = "";
 
-    images.forEach((item, index) => {
-        const li = document.createElement("li");
+    for (let i = 0; i < images.length; i++) {
+        getImages += getImagesTemplate(i);
+    }
 
-        li.className = "thumb";
-
-        li.addEventListener("click", () => openDialog(index));
-
-        li.addEventListener("keydown", (e) => {
-            if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                openDialog(index);
-            }
-        });
-
-        li.tabIndex = "0";
-        
-        li.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
-        thumbs.appendChild(li);
-    });
+    thumbs.innerHTML = getImages;
 }
+
+//open dialog
 
 function openDialog(i) {
     currentIndex = i;
     popupImg.src = images[i].src;
     popupImg.alt = images[i].alt;
     dialogRef.showModal();
+    document.body.classList.add('no-scroll');
     showPopupTitle();
     showImageNumber();
 }
+
+//open dialog with space or enter
+
+function handleKeyPress(event, index) {
+    if (event.key === 'Enter' || event.key === ' ') {
+        openDialog(index); 
+    }
+}
+
+//show alt text as title in dialog
 
 function showPopupTitle() {
     let popupTitle = popupImg.alt;
@@ -98,6 +120,8 @@ function showPopupTitle() {
     output.innerHTML = popupTitle;
 }
 
+//show actual number between button
+
 function showImageNumber() {
     let actualImage = currentIndex + 1;
     let maxImages = images.length;
@@ -105,6 +129,8 @@ function showImageNumber() {
 
     document.getElementById('imageNumber').innerHTML = output;
 }
+
+//open previous image
 
 function nextImage() {
     currentIndex = currentIndex + 1;
@@ -120,6 +146,8 @@ function nextImage() {
     showImageNumber();
 }
 
+//open next image
+
 function prevImage() {
     currentIndex = currentIndex - 1;
 
@@ -134,9 +162,14 @@ function prevImage() {
     showImageNumber();
 }
 
+//close dialog
+
 function closeDialog() {
     dialogRef.close();
+    document.body.classList.remove('no-scroll');
 }
+
+//close dialog with outside click
 
 function handleDialogClick(event) {
     if (event.target.id === 'imagePopup') {
