@@ -1,18 +1,23 @@
 @media screen and (max-width: 550px) {
-    
+
     h1 {
         font-size: 40px;
     }
 
-        .navText {
+    .navText {
         display: none;
     }
 
+    footer {
+        transform: translateX(0);
+        border-radius: 0;
+        width: 100%;
+    }
 
 }
 
 @media screen and (max-width: 390px) {
-    
+
     h1 {
         font-size: 30px;
     }
@@ -24,7 +29,7 @@
 }
 
 @media screen and (max-width: 370px) {
-    
+
     .thumb img {
         width: 250px;
         height: 250px;
